@@ -38,11 +38,8 @@ function handleText(textNode)
 {
     var v = textNode.nodeValue;
 
-    v = v.replace(/\bCFC\b/g, "those bee guys");
-    v = v.replace(/\bcfc\b/g, "those bee guys");
-    v = v.replace(/\bthe imperium\b/g, "those bee guys");
-    v = v.replace(/\bThe Imperium\b/g, "those bee guys");
-    v = v.replace(/\bTHE IMPERIUM\b/g, "those bee guys");
+    v = v.replace(/\bcfc\b/gi, "those bee guys");
+    v = v.replace(/\bthe imperium\b/gi, "those bee guys");
     
     textNode.nodeValue = v;
 }
