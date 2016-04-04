@@ -52,6 +52,7 @@ function handleText(textNode) {
     // Mittani substitution
     v = v.replace(/\bthe mittani\b/gi, "a bee guy");
     v = v.replace(/\bmittani\b/gi, "bee guy");
+    v = v.replace(/\bmittens\b/gi, "bee guy");
 
     textNode.nodeValue = v;
 }
