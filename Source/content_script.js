@@ -1,7 +1,6 @@
 walk(document.body);
 
-function walk(node) 
-{
+function walk(node) {
     // Shamelessly stolen from: https://github.com/panicsteve/cloud-to-butt
     // I stole this function from here:
     // http://is.gd/mwZp7E
@@ -34,15 +33,25 @@ function walk(node)
     }
 }
 
-function handleText(textNode) 
-{
+function handleText(textNode) {
     var v = textNode.nodeValue;
 
-    v = v.replace(/\bCFC\b/g, "those bee guys");
-    v = v.replace(/\bcfc\b/g, "those bee guys");
-    v = v.replace(/\bthe imperium\b/g, "those bee guys");
-    v = v.replace(/\bThe Imperium\b/g, "those bee guys");
-    v = v.replace(/\bTHE IMPERIUM\b/g, "those bee guys");
-    
+    // fix some tenses
+    v = v.replace(/\bCFC has\b/gi, "CFC have");
+    v = v.replace(/\bthe imperium has\b/gi, "the imperium have");
+
+    // CFC/Imperium Substitution
+    v = v.replace(/\bCFC\b/gi, "those bee guys");
+    v = v.replace(/\bthe imperium\b/gi, "those bee guys");
+    v = v.replace(/\bimperium\b/gi, "those bee guys");
+
+    // Goonswarm Substitution
+    v = v.replace(/\bGoonswarm Federation\b/gi, "those bee guys");
+    v = v.replace(/\bGoonswarm\b/gi, "those bee guys");
+
+    // Mittani substitution
+    v = v.replace(/\bthe mittani\b/gi, "a bee guy");
+    v = v.replace(/\bmittani\b/gi, "bee guy");
+
     textNode.nodeValue = v;
 }
