@@ -8,10 +8,11 @@ function walk(node)
     
     var child, next;
     
-    if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
-        || node.classList.indexOf('ace_editor') > -1) {
-        return;
-    }
+    // This breaks the script...  It's probably important but requires further debugging.
+    //if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
+    //    || node.classList.indexOf('ace_editor') > -1) {
+    //    return;
+    //}
 
     switch ( node.nodeType )  
     {
