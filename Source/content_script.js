@@ -48,6 +48,7 @@ function handleText(textNode) {
     // Goonswarm Substitution
     v = v.replace(/\bGoonswarm Federation\b/gi, "those bee guys");
     v = v.replace(/\bGoonswarm\b/gi, "those bee guys");
+    v = v.replace(/\bGoons\b/gi, "bees");
 
     // Mittani substitution
     v = v.replace(/\bthe mittani\b/gi, "a bee guy");
